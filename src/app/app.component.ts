@@ -3,6 +3,7 @@ import { CurrencyPipe } from '@angular/common';
 import { MatTableModule } from '@angular/material/table';
 import { CdkTableModule } from '@angular/cdk/table';
 import { MatTableDataSource } from '@angular/material/table';
+import { NewTableComponent } from './new-table/new-table.component';
 
 export interface PeriodicElement {
   name: string;
@@ -15,7 +16,8 @@ export interface PeriodicElement {
   imports: [
     MatTableModule,
     CurrencyPipe,
-    CdkTableModule
+    CdkTableModule,
+    NewTableComponent
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']

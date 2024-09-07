@@ -1,0 +1,23 @@
+
+<div class="p-0">
+    <button mat-flat-button (click)="toggleSummary()" class="bg-blue-500 text-white p-2 rounded">
+      افزودن
+    </button>
+  
+    <div *ngIf="showSummary" class="p-0 fixed bottom-0 w-full bg-white">
+      <div class="bg-gray-200 p-0">
+        <h1 class="p-7 font-bold">خلاصه صورت حساب</h1>
+      </div>
+      <mat-divider></mat-divider>
+      <span class="grid grid-cols-3 grid-rows-2">
+        <div *ngFor="let item of dataSource.data; let i = index" 
+        class="p-4 border flex flex-row"
+        [ngClass]="{'bg-gray-100': i % 2 === 0}"
+        >
+          <div class="font-bold">{{ item.name }} :</div>
+          <div class="text-gray-600">{{ formatCurrency(item.cost) }}</div>
+        </div>
+      </span>
+    </div>
+  </div>
+  
